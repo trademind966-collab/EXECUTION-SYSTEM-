@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/*
+  Design tokens — "Execution System"
+  Palette grounded in the product's own metaphor: a field notebook /
+  ledger for tracking real execution, not a generic SaaS dashboard.
+  - paper: warm off-white ledger background
+  - ink: near-black warm text
+  - moss: deep forest-green accent (growth / progress), used sparingly
+  - clay: muted warm terracotta-brown for warnings/missed states
+  - rule: hairline border color
+*/
+:root {
+  --paper: #f7f5ef;
+  --ink: #1c1a17;
+  --ink-muted: #6b665c;
+  --moss: #2f5d46;
+  --moss-dark: #1f3f31;
+  --clay: #a1543a;
+  --rule: #ddd8c9;
+  --card: #fffdf8;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-moss: var(--moss);
+  --color-moss-dark: var(--moss-dark);
+  --color-clay: var(--clay);
+  --color-rule: var(--rule);
+  --color-card: var(--card);
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: ui-sans-serif, -apple-system, "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-serif);
+}
+
+::selection {
+  background: var(--moss);
+  color: var(--paper);
+}
